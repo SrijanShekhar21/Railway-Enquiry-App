@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import SeatAvailability from "../SeatAvailability/SeatAvailability.jsx";
 import PNRStatus from "../PNRStatus/PNRStatus.jsx";
 import LiveTrainStatus from "../LiveTrainStatus/LiveTrainStatus.jsx";
-import landscape from "/landscape.jpg";
 import { Routes, Route } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 

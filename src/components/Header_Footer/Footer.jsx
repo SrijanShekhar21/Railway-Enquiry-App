@@ -2,7 +2,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer>Copyright © Srijan Shekhar | {new Date().getFullYear()} </footer>
+    <footer>
+      Copyright © Srijan Shekhar | IITK | {new Date().getFullYear()}{" "}
+    </footer>
   );
 }
 

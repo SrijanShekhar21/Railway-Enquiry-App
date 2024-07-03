@@ -8,7 +8,7 @@ function Header() {
       <nav className="navbar">
         <div className="websiteName">
           <NavLink to="/" style={{ textDecoration: "none" }}>
-            <p>🚆RAILसेवा.com</p>
+            <p>🚆RAILसेवा</p>
           </NavLink>
         </div>
 

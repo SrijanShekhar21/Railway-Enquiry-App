@@ -62,73 +62,75 @@ function LiveTrainSpecificPage() {
         >
           <Skeleton count={15} />
         </SkeletonTheme>
-      ) : liveData.new_message ? (
+      ) : liveData !== undefined && liveData.new_message ? (
         <h3>{liveData.new_message}</h3>
       ) : (
-        <div className="liveSpecificContent">
-          <div className="liveTrainName_number">
-            <div className="eachInLiveName">
-              <h1>{liveData.train_name} Live Running Status</h1>
+        liveData !== undefined && (
+          <div className="liveSpecificContent">
+            <div className="liveTrainName_number">
+              <div className="eachInLiveName">
+                <h1>{liveData.train_name} Live Running Status</h1>
+              </div>
+              <div className="eachInLiveName">
+                <p>#{liveData.train_number}</p>
+              </div>
+              <div className="eachInLiveName">
+                <p>
+                  <span style={{ fontWeight: "lighter" }}>
+                    Train Start Date:{" "}
+                  </span>
+                  {liveData.train_start_date}
+                </p>
+              </div>
             </div>
-            <div className="eachInLiveName">
-              <p>#{liveData.train_number}</p>
+            <div className="liveInfoTitleBar">
+              <div className="titleLeft">
+                <p>Arrival</p>
+              </div>
+              <div className="titleMid">
+                <p>Station</p>
+              </div>
+              <div className="titleRight">
+                <p>Departure</p>
+              </div>
             </div>
-            <div className="eachInLiveName">
-              <p>
-                <span style={{ fontWeight: "lighter" }}>
-                  Train Start Date:{" "}
-                </span>
-                {liveData.train_start_date}
-              </p>
-            </div>
-          </div>
-          <div className="liveInfoTitleBar">
-            <div className="titleLeft">
-              <p>Arrival</p>
-            </div>
-            <div className="titleMid">
-              <p>Station</p>
-            </div>
-            <div className="titleRight">
-              <p>Departure</p>
-            </div>
-          </div>
-          <div className="liveRouteContainer">
-            <div className="previousStationContainer">
-              {liveData.previous_stations.map((station, index) => {
-                return (
-                  <PrevStationCard
-                    upcoming={false}
-                    key={index}
-                    station={station}
-                  />
-                );
-              })}
-            </div>
-            <div ref={reachingRef} className="currentInformationContainer">
-              <CurrentInfoCard liveInfo={liveData.current_location_info} />
-            </div>
-            <div className="reachingStationContainer">
-              <ReachingStationCard
-                key={liveData.upcoming_stations[1].station_code}
-                station={liveData.upcoming_stations[1]}
-              />
-            </div>
-            <div className="upcomingStationContainer">
-              {liveData.upcoming_stations.map((station, index) => {
-                return (
-                  index > 1 && (
+            <div className="liveRouteContainer">
+              <div className="previousStationContainer">
+                {liveData.previous_stations.map((station, index) => {
+                  return (
                     <PrevStationCard
-                      upcoming={true}
+                      upcoming={false}
                       key={index}
                       station={station}
                     />
-                  )
-                );
-              })}
+                  );
+                })}
+              </div>
+              <div ref={reachingRef} className="currentInformationContainer">
+                <CurrentInfoCard liveInfo={liveData.current_location_info} />
+              </div>
+              <div className="reachingStationContainer">
+                <ReachingStationCard
+                  key={liveData.upcoming_stations[1].station_code}
+                  station={liveData.upcoming_stations[1]}
+                />
+              </div>
+              <div className="upcomingStationContainer">
+                {liveData.upcoming_stations.map((station, index) => {
+                  return (
+                    index > 1 && (
+                      <PrevStationCard
+                        upcoming={true}
+                        key={index}
+                        station={station}
+                      />
+                    )
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
+        )
       )}
     </div>
   );

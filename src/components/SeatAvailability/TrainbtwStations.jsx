@@ -169,20 +169,22 @@ function TrainbtwStations(props) {
 
         {isLoading ? (
           <TrainsloadingSkeleton />
-        ) : trains.length === 0 ? (
+        ) : trains !== undefined && trains.length === 0 ? (
           <h1>No Trains Found</h1>
         ) : (
-          <div className="eachTrainContainer">
-            {trains.map((train) => {
-              return (
-                <EachTrainCard
-                  key={uuidv1()}
-                  train={train}
-                  date_quota={date_quota}
-                />
-              );
-            })}
-          </div>
+          trains !== undefined && (
+            <div className="eachTrainContainer">
+              {trains.map((train) => {
+                return (
+                  <EachTrainCard
+                    key={uuidv1()}
+                    train={train}
+                    date_quota={date_quota}
+                  />
+                );
+              })}
+            </div>
+          )
         )}
       </div>
     </div>

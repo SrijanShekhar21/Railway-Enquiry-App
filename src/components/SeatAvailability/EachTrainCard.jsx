@@ -172,7 +172,7 @@ function EachTrainCard({ train, date_quota }) {
         </SkeletonTheme>
       ) : (
         selClass !== "SRIJAN" &&
-        AllseatsAvailable.length > 0 && (
+        AllseatsAvailable !== undefined && (
           <div className="fiveDaysContainerInCard">
             {AllseatsAvailable.map((eachDay) => {
               return <SeatsForFiveDays key={uuidv1()} eachDayInfo={eachDay} />;

@@ -1,0 +1,1128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes transitionIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.websiteName {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+nav p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 3rem;
+  color: #051937;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aliceblue; */
+  color: hsl(0, 0%, 55%);
+  width: 100%;
+}
+
+.body {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.container {
+  /* border: 3px solid red; */
+  min-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  /* overflow-y: auto;
+  height: 100px; */
+}
+
+.totalLanding {
+  width: 100%;
+}
+
+.landingImg {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.welcomeTitle {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 16%;
+}
+
+.welcomeText {
+  font-size: 3.5rem;
+}
+
+p.planningText {
+  font-size: 2rem;
+}
+
+div.planningText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.seatInLandin {
+  margin-top: 1.5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabsDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  box-sizing: border-box;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.tab {
+  min-height: 2rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); */
+  border-radius: 5px;
+}
+
+.tab:hover {
+  font-weight: bold;
+}
+
+.activeTab div {
+  font-weight: bold;
+  /* box-shadow: 0 0 0 0 hsl(0, 0%, 75%); */
+  /* color: white; */
+  border: none;
+}
+
+.inputDrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.inputField {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  padding-top: 0;
+  padding-bottom: 0.6rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.inputField:focus {
+  outline: none;
+  /* box-shadow: 0 12px 10px 0 hsl(0, 0%, 0%); */
+}
+
+.stationsD {
+  /* border: 1px solid black; */
+  /* float: left; */
+  /* width: auto; */
+  overflow-y: auto;
+  max-height: 15rem;
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  background-color: hsl(0, 0%, 90%);
+  box-shadow: 0 3px 3px 0 hsl(0, 0%, 55%);
+  border-radius: 0 0 15px 15px;
+  z-index: 5;
+  border: 1px solid hsl(0, 0%, 75%);
+  border-top: none;
+}
+
+.eachStationD p {
+  font-size: 1.3rem;
+  padding: 0.2rem;
+  /* border: 1px solid black; */
+  background-color: hsl(0, 0%, 95%);
+}
+
+.eachStationD p:hover {
+  background-color: hsl(0, 0%, 80%);
+  cursor: pointer;
+}
+.stationsA {
+  /* border: 1px solid black; */
+  /* float: left; */
+  /* width: auto; */
+  overflow-y: auto;
+  max-height: 15rem;
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  background-color: hsl(0, 0%, 90%);
+  box-shadow: 0 10px 10px 0 hsl(0, 0%, 25%);
+  border-radius: 0 0 15px 15px;
+  z-index: 5;
+}
+
+.eachStationA p {
+  font-size: 1.3rem;
+  padding: 0.2rem;
+  /* border: 1px solid black; */
+  background-color: hsl(0, 0%, 95%);
+}
+
+.eachStationA p:hover {
+  background-color: hsl(0, 0%, 80%);
+  cursor: pointer;
+}
+
+.codeSpan {
+  font-weight: bold;
+}
+
+.SeatAvailability {
+  /* border: 2px solid hsl(0, 0%, 90%); */
+  border-radius: 10px;
+  /* margin: 0.5rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* background-color: white; */
+  background-color: hsla(0, 0%, 0%, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  width: 60%;
+  margin-top: 1rem;
+  animation: transitionIn 0.75s;
+}
+
+.SeatAvailability h1 {
+  margin-top: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.bothSelectDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  width: 100%;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.selectStation {
+  /* border: 2px solid black; */
+  /* box-shadow: 0 0 10px 0 hsl(0, 0%, 80%); */
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  /* padding: 0.5rem; */
+  border: 1px solid hsl(0, 0%, 75%);
+  position: relative;
+}
+
+.selectStation p {
+  /* margin: 1rem; */
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  color: hsl(0, 0%, 15%);
+}
+
+.seatsBottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.selectDate,
+.selectQuota,
+.seatsButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.dateLabel,
+.quotaLabel {
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.dateInput,
+.quotaSelect {
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 50%;
+  padding: 0.5rem;
+  outline: 1px solid hsl(0, 0%, 75%);
+  border: none;
+  font-weight: bold;
+}
+
+.dateInput {
+  font-size: 0.8rem;
+}
+
+.searchSeats {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  background-color: hsl(100, 100%, 75%);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.searchSeats:hover {
+  background-color: hsl(100, 100%, 50%);
+  /* color: white; */
+  /* box-shadow: 0 0 10px 0 hsl(0, 0%, 75%); */
+}
+
+.trainBtwStations {
+  /* padding: 0.5rem 1.5rem; */
+  background-color: hsla(0, 0%, 0%, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 2px solid hsl(0, 0%, 90%); */
+  /* border-radius: 12px; */
+  width: 70vw;
+  box-sizing: border-box;
+}
+
+.sortButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0.5rem;
+  /* padding: 0.5rem; */
+}
+
+.sort {
+  padding: 0.5rem;
+  /* border-radius: 5px; */
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  /* box-shadow: 0 0 3px 0 hsl(0, 0%, 65%); */
+}
+
+.sort:hover {
+  /* background-color: hsl(0, 0%, 90%); */
+  font-weight: bold;
+}
+
+.eachTrainContainer {
+  width: 100%;
+  overflow-y: auto;
+  height: 80vh;
+}
+
+.eachTrain {
+  /* border: 2px solid green; */
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  box-sizing: border-box;
+  width: 100%;
+  /* border-radius: 15px; */
+}
+
+/* .topTrain{
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+} */
+
+.trainNameContainer {
+  box-shadow: 0 0 10px 0 hsl(0, 0%, 75%);
+  background-color: hsl(16, 42%, 87%);
+  padding: 0.5rem 0;
+  /* border-radius: 12px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* padding: 1rem; */
+}
+
+.trainNameContainer h1 {
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.trainNameContainer p {
+  font-weight: bold;
+  font-size: 1rem;
+  color: hsl(0, 0%, 0%);
+}
+
+.testCustomCSS {
+  color: #f4f4f4c9;
+}
+
+.fromToStation,
+.fromToTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stationPara {
+  margin-right: 5px;
+}
+
+.stationCodePara {
+  font-weight: bold;
+}
+
+.durationContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.timePara {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.durationTravel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.durationPara {
+  font-weight: bold;
+}
+
+.durationSpan {
+  font-weight: 100;
+}
+
+.trainClasses {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.eachClass {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 90%);
+}
+
+.eachClass p {
+  font-weight: bold;
+}
+
+.eachClass:hover {
+  background-color: hsl(0, 0%, 80%);
+}
+
+.activeClass div {
+  background-color: hsl(0, 0%, 15%);
+  color: white;
+}
+
+.fiveDaysContainerInCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.seatsForFiveDaysContainer {
+  min-height: 5rem;
+  min-width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 hsl(0, 0%, 75%);
+}
+
+.seatsForFiveDaysContainer:hover {
+  cursor: pointer;
+}
+
+.seatDate,
+.seatStatus {
+  font-size: 1rem;
+}
+
+.seatStatus {
+  font-weight: bold;
+}
+
+.liveTrainStatus {
+  /* border: 2px solid hsl(0, 0%, 90%); */
+  border-radius: 10px;
+  /* margin: 0.5rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* background-color: white; */
+  background-color: hsla(0, 0%, 0%, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  width: 60%;
+  margin-top: 1rem;
+  animation: transitionIn 0.75s;
+}
+
+.liveTrainStatus h1 {
+  margin-top: 1rem;
+  color: white;
+}
+
+.inputLiveTrainNumber {
+  background-color: white;
+  width: 90%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 75%);
+}
+
+.inputUP {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  padding-left: 0.5rem;
+}
+
+.inputUP p {
+  font-size: 1rem;
+  /* font-weight: bold; */
+  color: black;
+}
+
+.inputDown {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.trainNumberInputLive {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: black;
+  font-weight: bold;
+}
+
+.selectDaysAgo {
+  background-color: white;
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.up p {
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.down {
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ithDay {
+  min-width: 15%;
+  min-height: 1.2rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 5px 0 hsl(0, 0%, 50%);
+}
+
+.ithDay_active {
+  background-color: hsl(0, 0%, 15%);
+  color: white;
+}
+
+.ithDay:hover {
+  background-color: hsl(0, 0%, 90%);
+  box-shadow: none;
+}
+
+.searchLiveStausBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchLiveStausBtn button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  background-color: hsl(100, 100%, 75%);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+
+.searchLiveStausBtn button:hover {
+  background-color: hsl(100, 100%, 50%);
+}
+
+.liveSpecificContainer {
+  width: 65%;
+  box-sizing: border-box;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.liveSpecificContent {
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.liveTrainName_number {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 1rem 0.5rem;
+  background-color: white;
+}
+
+.eachInLiveName {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.eachInLiveName p {
+  font-weight: bold;
+}
+
+.liveInfoTitleBar {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: hsl(0, 0%, 15%);
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+  padding-right: 1.8rem;
+}
+
+.titleLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+
+.titleMid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+}
+
+.liveRouteContainer {
+  background-color: white;
+}
+
+.upcomingStationContainer,
+.currentInformationContainer,
+.reachingStationContainer,
+.previousStationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.prevStationCard {
+  border-bottom: 1px solid hsl(0, 0%, 85%);
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  padding: 0.5rem 0;
+}
+
+.cardLeft {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardMid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardRight {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.currentInformationContainer {
+  /* border: 0.1px solid hsl(0, 0%, 85%); */
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  margin-top: 0.5rem;
+  padding: 1rem 0;
+}
+
+.currentInfoCard {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 hsl(0, 0%, 75%);
+  background-color: hsl(200, 100%, 15%);
+  color: white;
+}
+
+.reloadInfo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -150%;
+  right: 2%;
+}
+
+.topReload {
+  background-color: hsl(0, 0%, 95%);
+  font-size: 1rem;
+  padding: 3px 5px;
+  border-radius: 5px;
+  width: 5.5ch;
+  color: black;
+  box-shadow: 0 0 10px 0 hsl(0, 0%, 75%);
+}
+
+.bottomReload {
+  background-color: hsl(200, 100%, 15%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px 0 hsl(0, 0%, 75%);
+  cursor: pointer;
+}
+
+.reachingStationCard {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px 0 hsl(0, 0%, 75%);
+  background-color: hsl(200, 100%, 94%);
+  position: relative;
+}
+
+.searchPNRBtn button {
+  margin-top: 0rem;
+}
+
+.pnrSpecificContainer {
+  border: 2px solid red;
+  box-sizing: border-box;
+  width: 65%;
+}
+
+.pnrSpecificContent {
+  border: 2px solid green;
+  min-height: 50vh;
+  background-color: white;
+}
+
+.passengerDetailsCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.EachPassengerCard {
+  border: 2px solid blue;
+  min-height: 5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .container {
+    padding-top: 0;
+  }
+
+  .websiteName {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  nav p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    color: #051937;
+  }
+
+  .welcomeTitle {
+    top: 10%;
+  }
+
+  .welcomeText {
+    font-size: 2rem;
+  }
+
+  p.planningText {
+    font-size: 1.5rem;
+  }
+
+  div.planningText {
+    font-size: 1.3rem;
+  }
+
+  .SeatAvailability {
+    width: 90%;
+  }
+
+  .SeatAvailability h1 {
+    font-size: 1.2rem;
+  }
+
+  .tab {
+    padding: 0.1rem;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tabsDiv {
+    grid-gap: 5px;
+  }
+
+  .inputField {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .bothSelectDiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .seatsBottom {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0rem;
+  }
+
+  .selectDate,
+  .selectQuota,
+  .seatsButton {
+    width: 100%;
+    /* margin: 0.5rem; */
+  }
+
+  .selectDate,
+  .selectQuota {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .quotaSelect {
+    width: 55%;
+  }
+
+  .quotaSelect option {
+    font-size: 0.7rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stations {
+    top: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .seatsButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .selectStation p {
+    /* margin: 1rem; */
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 15%);
+  }
+
+  .sortButtons {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .sort {
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+  }
+
+  .trainBtwStations {
+    padding: 0.7rem 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .trainNameContainer h1 {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .timePara {
+    font-size: 1rem;
+  }
+
+  .stationPara {
+    font-size: 0.7rem;
+    margin-right: 2px;
+  }
+
+  .stationCodePara {
+    font-size: 0.7rem;
+  }
+
+  .eachTrain {
+    padding: 0.5rem;
+  }
+
+  .durationPara {
+    font-size: 0.7rem;
+  }
+
+  .durationTravel {
+    top: 32%;
+  }
+
+  .eachClass {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+  }
+
+  .seatsForFiveDaysContainer {
+    min-height: 3.6rem;
+    min-width: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 hsl(0, 0%, 75%);
+    padding: 0 0.5rem;
+  }
+
+  .seatsForFiveDaysContainer:hover {
+    cursor: pointer;
+  }
+
+  .seatDate,
+  .seatStatus {
+    font-size: 0.8rem;
+  }
+
+  .seatStatus {
+    font-weight: bold;
+  }
+
+  .liveSpecificContainer {
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .eachInLiveName h1 {
+    font-size: 1.2rem;
+  }
+
+  .cardLeft h3,
+  .cardMid h3 {
+    font-size: 1.3rem;
+  }
+
+  .reloadInfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -150%;
+    right: 2%;
+  }
+
+  .liveTrainStatus {
+    width: 90%;
+  }
+
+  .liveTrainStatus h1 {
+    font-size: 1.2rem;
+  }
+
+  .trainNumberInputLive {
+    padding-bottom: 0;
+  }
+
+  .down {
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-top: 0;
+  }
+
+  .ithDay {
+    font-size: 0.6rem;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0.3rem;
+    box-shadow: 0 0 5px 0 hsl(0, 0%, 50%);
+  }
+}

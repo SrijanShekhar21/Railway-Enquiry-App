@@ -1,0 +1,61 @@
+const seats = {
+  status: true,
+  message: "Success",
+  timestamp: 1719398355538,
+  data: [
+    {
+      ticket_fare: 3980,
+      catering_charge: 770,
+      alt_cnf_seat: null,
+      total_fare: 4750,
+      date: "29-6-2024",
+      confirm_probability_percent: "89",
+      confirm_probability: "High",
+      current_status: "PQWL25/WL12.",
+    },
+    {
+      ticket_fare: 3980,
+      catering_charge: 770,
+      alt_cnf_seat: null,
+      total_fare: 4750,
+      date: "30-6-2024",
+      confirm_probability_percent: "89",
+      confirm_probability: "High",
+      current_status: "PQWL26/WL10.",
+    },
+    {
+      ticket_fare: 4620,
+      catering_charge: 770,
+      alt_cnf_seat: null,
+      total_fare: 5390,
+      date: "1-7-2024",
+      current_status: "ISL STN DELETED.",
+    },
+    {
+      ticket_fare: 4620,
+      catering_charge: 770,
+      alt_cnf_seat: null,
+      total_fare: 5390,
+      date: "2-7-2024",
+      current_status: "ISL STN DELETED.",
+    },
+    {
+      ticket_fare: 4620,
+      catering_charge: 770,
+      alt_cnf_seat: null,
+      total_fare: 5390,
+      date: "3-7-2024",
+      current_status: "ISL STN DELETED.",
+    },
+    {
+      ticket_fare: 4620,
+      catering_charge: 770,
+      alt_cnf_seat: null,
+      total_fare: 5390,
+      date: "4-7-2024",
+      current_status: "ISL STN DELETED.",
+    },
+  ],
+};
+
+export default seats;

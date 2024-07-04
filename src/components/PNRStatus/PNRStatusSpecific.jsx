@@ -58,7 +58,7 @@ function PNRStatusSpecific() {
         </div>
       ) : pnrStatusData === undefined || pnrStatusData.TrainNo === null ? (
         <div>
-          <h1>Invalid PNR Number</h1>
+          <h1>PNR Number is either Invalid or Expired!</h1>
         </div>
       ) : (
         <div className="pnrSpecificContent">

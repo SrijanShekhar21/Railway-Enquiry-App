@@ -520,6 +520,14 @@ div.planningText {
   white-space: nowrap;
 }
 
+.farePara {
+  font-size: 0.9rem;
+}
+
+.fareSpan {
+  font-weight: bold;
+}
+
 .seatsForFiveDaysContainer {
   min-height: 5rem;
   min-width: 10rem;
@@ -1132,6 +1140,14 @@ div.planningText {
     border-radius: 5px;
     box-shadow: 0 0 10px 0 hsl(0, 0%, 75%);
     padding: 0 0.5rem;
+  }
+
+  .farePara {
+    font-size: 0.7rem;
+  }
+
+  .fareSpan {
+    font-weight: bold;
   }
 
   .seatsForFiveDaysContainer:hover {

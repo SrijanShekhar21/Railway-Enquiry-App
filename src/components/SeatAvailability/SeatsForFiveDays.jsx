@@ -28,6 +28,12 @@ function SeatsForFiveDays({ eachDayInfo }) {
         >
           {eachDayInfo.current_status}
         </p>
+        <p className="farePara">
+          Fare:{" "}
+          <span className="fareSpan" style={{ fontWeight: "bold" }}>
+            ₹{eachDayInfo.total_fare ? eachDayInfo.total_fare : null}
+          </span>
+        </p>
       </div>
     </div>
   );

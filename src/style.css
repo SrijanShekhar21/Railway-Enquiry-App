@@ -362,7 +362,7 @@ div.planningText {
   flex-direction: column;
   /* border: 2px solid hsl(0, 0%, 90%); */
   /* border-radius: 12px; */
-  width: 70vw;
+  width: 65vw;
   box-sizing: border-box;
 }
 
@@ -515,7 +515,7 @@ div.planningText {
 .fiveDaysContainerInCard {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow-x: scroll;
   white-space: nowrap;
 }
@@ -676,15 +676,14 @@ div.planningText {
 }
 
 .liveSpecificContainer {
-  width: 65%;
+  width: 65vw;
   box-sizing: border-box;
-  max-height: 100vh;
+  max-height: 85vh;
   overflow-y: scroll;
 }
 
 .liveSpecificContent {
   box-sizing: border-box;
-  min-height: 100vh;
 }
 
 .liveTrainName_number {
@@ -851,26 +850,98 @@ div.planningText {
 }
 
 .pnrSpecificContainer {
-  border: 2px solid red;
   box-sizing: border-box;
-  width: 65%;
+  min-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .pnrSpecificContent {
-  border: 2px solid green;
-  min-height: 50vh;
-  background-color: white;
+  width: 65vw;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  max-height: 85vh;
+  overflow-y: scroll;
+}
+
+.pnrNumber {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  color: white;
+}
+
+.pnrTrainData {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.pneTrainNamediv {
+  font-weight: bold;
+}
+
+.pnrTrainRouteDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.8rem;
 }
 
 .passengerDetailsCardContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .EachPassengerCard {
-  border: 2px solid blue;
-  min-height: 5rem;
+  /* border: 2px solid blue; */
+  /* min-height: 5rem; */
+  width: 100%;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.eachPassengerCardTop {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.eachPassengerCardMiddle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.trainDataRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  font-size: 1.5rem;
+}
+
+.psgrNumber {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cnfProb {
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1124,5 +1195,54 @@ div.planningText {
     padding: 0.5rem 0.5rem;
     margin: 0.5rem 0.3rem;
     box-shadow: 0 0 5px 0 hsl(0, 0%, 50%);
+  }
+
+  .pnrSpecificContent {
+    width: 100%;
+  }
+
+  .pnrNumber h1 {
+    font-size: 1.3rem;
+  }
+
+  .pnrTrainData {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.2rem 0;
+  }
+
+  .pneTrainNamediv {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pnrTrainRouteDiv {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .travelDatePNR {
+    font-size: 0.8rem;
+  }
+
+  .EachPassengerCard {
+    padding: 0.3rem 0.5rem;
+  }
+
+  .psgrNumber {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.3rem;
+  }
+
+  .cnfProb {
+    font-size: 0.7rem;
   }
 }

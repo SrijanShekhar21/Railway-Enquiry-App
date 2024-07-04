@@ -62,6 +62,10 @@ function LiveTrainSpecificPage() {
         >
           <Skeleton count={15} />
         </SkeletonTheme>
+      ) : liveData === undefined ? (
+        <div>
+          <h1>Invalid Train Number</h1>
+        </div>
       ) : liveData !== undefined && liveData.new_message ? (
         <h3>{liveData.new_message}</h3>
       ) : (

@@ -24,7 +24,7 @@ function LiveTrainSpecificPage() {
         startDay: daysAgo,
       },
       headers: {
-        "x-rapidapi-key": "7196cd55aemsha042290a625d9adp1c2760jsn83f557280247",
+        "x-rapidapi-key": import.meta.env.VITE_API_KEY,
         "x-rapidapi-host": "irctc1.p.rapidapi.com",
       },
     };
